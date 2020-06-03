@@ -23,9 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'a$al#sly-2+p7(d&8*h%tx4s1-bf2v26yw4p#x@!t7&0y+3y@s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['mehedi-api.herokuapp.com','127.0.0.1']
+
 
 # Application definition
 
@@ -65,10 +66,12 @@ REST_FRAMEWORK = {
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
 
      'whitenoise.middleware.WhiteNoiseMiddleware',
-     
+    'django.contrib.sessions.middleware.SessionMiddleware',
+
+
+
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
